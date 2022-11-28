@@ -10,6 +10,29 @@ test("Debe contener 'Doggy Directory'", () => {
   expect(screen.getByRole("heading")).toHaveTextContent(/Doggy Directory/);
 });
 
+//testeo de rederizado de botón (Hector Jimenez Lopez)
+
+test("test render of the button", () => {
+  render(<App />);
+
+  expect(screen.getByRole("button")).toBeInTheDocument();
+
+});
+
+//Testeo de verificación de clase (Juan Felipe Ospina)
+test('Clase del H1',()=> {
+  render(<App />);
+  const titulo= screen.getByRole('heading',{name: 'Doggy Directory 🐶'});
+  expect(titulo).toHaveClass('mt-4 mb-5');
+});
+
+//Testeo de verificacion texto Button (Sebastián Valencia G)
+test("Content button", () => {
+  render(<App />);
+
+  expect(screen.getByRole("button")).toHaveTextContent("Search");
+});
+
 //Prueba de tipo de contenido a un elemento -Alexis C.
 test("typeof of search results counter", () => {
   expect(typeof ("fs-5")).toBe("string");
