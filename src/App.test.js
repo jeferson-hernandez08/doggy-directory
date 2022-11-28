@@ -22,6 +22,13 @@ test("test render of the button", () => {
 //Testeo de verificación de clase (Juan Felipe Ospina)
 test('Clase del H1',()=> {
   render(<App />);
-  const titulo= screen.getByRole('heading',{name: 'Doggy Directory'});
+  const titulo= screen.getByRole('heading',{name: 'Doggy Directory 🐶'});
   expect(titulo).toHaveClass('mt-4 mb-5');
+});
+
+//Testeo de verificacion texto Button (Sebastián Valencia G)
+test("Content button", () => {
+  render(<App />);
+
+  expect(screen.getByRole("button")).toHaveTextContent("Search");
 });
