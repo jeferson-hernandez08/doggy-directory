@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import App from "./App";
 
 
-// Testeo de verificación de una cadena de caracteres 'Doggy Directory'  (Harold Jaramillo Villa)
+//Testeo de verificación de una cadena de caracteres 'Doggy Directory'  (Harold Jaramillo Villa)
 
 test("Debe contener 'Doggy Directory'", () => {
   render(<App />);
@@ -26,6 +26,14 @@ test('Clase del H1',()=> {
   expect(titulo).toHaveClass('mt-4 mb-5');
 });
 
+//Testeo en el selector option (Jeferson Hernandez)
+test("test render, select option", () => {
+  render(<App />);
+
+  expect(screen.getByRole("option")).toBeInTheDocument();
+
+});
+
 //Testeo de verificacion texto Button (Sebastián Valencia G)
 test("Content button", () => {
   render(<App />);
@@ -38,10 +46,9 @@ test("typeof of search results counter", () => {
   expect(typeof ("fs-5")).toBe("string");
 });
 
-//testeo de redenrizado de la imagen(Maria Camila Betancourth)
+//Testeo de renderizado de la imagen(Maria Camila Betancourth)
 
 test("test render, en la imagen", () => {
-  render(<App/>);
-
+render(<App/>);
   expect(screen.getByRole("img")).toBeInTheDocument();
 });
