@@ -52,3 +52,12 @@ test("test render, en la imagen", () => {
 render(<App/>);
   expect(screen.getByRole("img")).toBeInTheDocument();
 });
+
+//testeo de renderizado de botón (Camila Arciniegas)
+test("test render , en el funcionamiento main", () => {
+  render(<App />);
+
+  expect(screen.getByRole("main")).toBeInTheDocument();
+
+});
+
