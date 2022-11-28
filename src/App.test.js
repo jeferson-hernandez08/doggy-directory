@@ -18,3 +18,10 @@ test("test render of the button", () => {
   expect(screen.getByRole("button")).toBeInTheDocument();
 
 });
+
+//Testeo de verificación de clase (Juan Felipe Ospina)
+test('Clase del H1',()=> {
+  render(<App />);
+  const titulo= screen.getByRole('heading',{name: 'Doggy Directory'});
+  expect(titulo).toHaveClass('mt-4 mb-5');
+});
