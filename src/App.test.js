@@ -37,3 +37,11 @@ test("Content button", () => {
 test("typeof of search results counter", () => {
   expect(typeof ("fs-5")).toBe("string");
 });
+
+//testeo de redenrizado de la imagen(Maria Camila Betancourth)
+
+test("test render, en la imagen", () => {
+  render(<App/>);
+
+  expect(screen.getByRole("img")).toBeInTheDocument();
+});
