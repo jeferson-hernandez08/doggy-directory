@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("renders the landing page", () => {
-  render(<App />);
-});
 
-//Alexis C. Prueba de tipo de contenido a un elemento
-test("typeof of search results counter", () => {
-  expect(typeof ("fs-5")).toBe("string");
+// Testeo de verificación de una cadena de caracteres 'Doggy Directory'  (Harold Jaramillo Villa)
+
+test("Debe contener 'Doggy Directory'", () => {
+  render(<App />);
+
+  expect(screen.getByRole("heading")).toHaveTextContent(/Doggy Directory/);
 });
