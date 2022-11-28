@@ -34,11 +34,14 @@ test("test render, select option", () => {
 
 });
 
+//Testeo de verificacion texto Button (Sebastián Valencia G)
+test("Content button", () => {
+  render(<App />);
 
+  expect(screen.getByRole("button")).toHaveTextContent("Search");
+});
 
-
-
-
-
-
-
+//Prueba de tipo de contenido a un elemento -Alexis C.
+test("typeof of search results counter", () => {
+  expect(typeof ("fs-5")).toBe("string");
+});
